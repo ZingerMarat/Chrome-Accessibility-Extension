@@ -1,0 +1,39 @@
+{
+    "manifest_version": 3,
+    "name": "Accessibility Extension",
+    "description": "Accessibility Extension - project of SCE students",
+    "version": "1.0",
+    "author": "Marat Zinger, Hai Elazari ",
+    "action": {
+        "default_popup": "html/popup.html",
+        "default_icon": "icons/accessibility.png"
+    },
+    "icons": {
+        "48": "icons/accessibility.png",
+        "96": "icons/accessibility.png"
+      },
+    "content_scripts": [
+        {
+            "js": [
+                "js/content.js"
+            ],
+            "matches": [
+                "<all_urls>"
+            ]
+        }
+    ],
+    "permissions": [
+        "tabs",
+        "activeTab",
+        "scripting",
+        "storage",
+        "alarms",
+        "notifications"
+    ],
+    "host_permissions": [
+        "<all_urls>"
+    ],
+    "background": {
+        "service_worker": "js/background.js"
+    }
+}

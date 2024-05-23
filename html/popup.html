@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accessibility action popup</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      width: 250px;
+      padding: 30px;
+      gap: 5px;
+    }
+
+    .content h2,
+    .content .col {
+      white-space: nowrap;
+    }
+
+    button {
+  color: #090909;
+  padding: 5px 5px;
+  font-size: 11px;
+  border-radius: 0.5em;
+  background: #e8e8e8;
+  cursor: pointer;
+  border: 1px solid #e8e8e8;
+  transition: all 0.3s;
+  width: 50px;
+  /* box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff; */
+}
+
+button:active {
+  color: #666;
+  box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+}
+
+
+    .row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .col {
+      padding: 10px 0;
+    }
+
+    .help-page:hover, .settings-page:hover, .choise:hover {
+      font-size: 1.2em;
+      font-weight: bold;
+      cursor: default;
+    }
+
+    /* The switch - the box around the slider */
+.switch {
+  font-size: 20px;
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 10px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  border-radius: 5px;
+  left: 3px;
+  bottom: 2px;
+  background-color: white;
+  transition: 0.4s;
+}
+
+.switch input:checked + .slider {
+  background-color: green;
+}
+
+.switch input:checked + .slider:before {
+  transform: translateX(18px);
+}
+.change-background{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.down{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+}
+
+#bottone1 {
+ padding: 3px;
+ background: #1d00d9;
+ border: none;
+ color: #ffffff;
+ font-family: inherit;
+ text-align: center;
+ cursor: pointer;
+ width: 140px;
+ transition: 0.4s;
+}
+
+#bottone1:hover {
+ box-shadow: 3px 3px 3px -14px #1d00d9;
+}
+
+#bottone1:active {
+ box-shadow: 7px 5px 56px -10px #1d00d9;
+}
+
+  </style>
+</head>
+
+<body>
+  <div class="content">
+    <Image src="/icons/accessibility.png" alt="SCE logo" style="width: 50px; height: 50px; display: block; margin: auto;"/>
+    <h2>SCE Accessibility Extension</h2>
+
+    <!--bigger font #biggerFont-->
+    <div class="row">
+      <!-- <input type="checkbox" id="biggerFont" name="biggerFont" value="Bigger Font" class="toggle"> -->
+      <label class="switch">
+        <input type="checkbox"  id="biggerFont" name="biggerFont" value="Bigger Font" class="toggle"/>
+        <span class="slider"></span>
+      </label>
+      <label for="biggerFont" class="choise">Bigger Font</label>
+    </div>
+    
+    <div class="row">
+      <!-- <input type="checkbox" id="dyslexicFriendly" name="dyslexicFriendly" value="Better Alt Tags" class="toggle"> -->
+      <label class="switch">
+        <input type="checkbox" id="dyslexicFriendly" name="dyslexicFriendly" value="Better Alt Tags" class="toggle">
+        <span class="slider"></span>
+      </label>
+      <label for="dyslexicFriendly" class="choise">Dyslexic Friendly Font</label>
+    </div>
+
+    <div class="row">
+      <!-- <input type="checkbox" id="readableFont" name="readableFont" value="Readable Font" class="toggle"> -->
+      <label class="switch">
+        <input type="checkbox"  id="readableFont" name="readableFont" value="Readable Font" class="toggle">
+        <span class="slider">
+        </span>
+      </label>
+      <label for="readableFont" class="choise">Readable Font</label>
+    </div>
+
+    <!--inverse colors-->
+    <div class="row">
+      <!-- <input type="checkbox" id="inverseColors" name="inverseColors" value="Inverse Colors" class="toggle"> -->
+      <label class="switch">
+        <input type="checkbox"  id="inverseColors" name="inverseColors" value="Inverse Colors" class="toggle">
+        <span class="slider">
+        </span>
+      </label>
+      
+      <label for="inverseColors" class="choise">Inverse Colors</label>
+    </div>
+
+    <!--grayscale #grayscale-->
+    <div class="row">
+      <!-- <input type="checkbox" id="grayscale" name="grayscale" value="Grayscale" class="toggle"> -->
+      <label class="switch">
+        <input type="checkbox" id="grayscale" name="grayscale" value="Grayscale" class="toggle">
+        <span class="slider">
+        </span>
+      </label>
+      
+      <label for="grayscale" class="choise">Grayscale</label>
+    </div>
+
+    <div class="row">
+      <!-- <input type="checkbox" id="zoom"> -->
+      <label class="switch">
+        <input type="checkbox" id="zoom">
+        <span class="slider">
+        </span>
+      </label>
+      
+      <label for="zoom" class="choise">Zoom</label>
+    </div>
+
+    <div class="row">
+      <div class="col change-background">
+        <div class="up">
+          <span class="">Set background color</span>
+        </div>
+        <div class="down">
+          <input type="color" value="#e66465" class="input-color"  style="width: 30px; height: 20px;" />
+          <button  class="color-button">Set</button>
+          <button  class="delete-color-button">Delete</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="row down">
+      <button id="bottone1" class="help-page"><strong>About extension</strong></button>
+      <!-- <input type="button" value="About extension" id="bottone1" class="help-page"> -->
+      <!-- <span class="help-page">About extension</span> -->
+    </div>
+    
+  <script src="/js/popup.js"></script>
+</body>
+
+</html>
