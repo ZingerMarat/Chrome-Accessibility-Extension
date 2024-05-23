@@ -1,14 +1,14 @@
-Accessibility Enhancer Chrome Extension
+# Accessibility Enhancer Chrome Extension
 
 Accessibility Enhancer is a powerful tool designed to improve the accessibility of web pages for individuals with various disabilities. This extension provides several customization options to enhance readability and visual comfort.
 ![image](https://github.com/ZingerMarat/Chrome-Accessibility-Extension/assets/93285999/24b26b69-ec5b-45f2-b866-9af9033cf67c)
 
 
-Features
+## Features
 
 ![image](https://github.com/ZingerMarat/Chrome-Accessibility-Extension/assets/93285999/1b97a880-ebc9-43cb-821e-7d33670489c6)
 
-To install the Accessibility Enhancer Chrome Extension, follow these steps:
+## To install the Accessibility Enhancer Chrome Extension, follow these steps:
 
 Download the Extension:
 
